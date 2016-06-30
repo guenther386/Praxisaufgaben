@@ -1,0 +1,147 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{1634E860-B5D8-4125-ABB8-A7F4EE15E950}</ProjectGuid>
+    <RootNamespace>raytracer</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>../../include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <OpenMPSupport>true</OpenMPSupport>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>../../include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <OpenMPSupport>true</OpenMPSupport>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\include\image_io.h" />
+    <ClInclude Include="..\..\include\mat.h" />
+    <ClInclude Include="..\..\include\obj_reader.h" />
+    <ClInclude Include="..\..\include\timing.h" />
+    <ClInclude Include="..\..\include\tiny_vec.h" />
+    <ClInclude Include="..\..\include\utils.h" />
+    <ClInclude Include="..\..\include\vec.h" />
+    <ClInclude Include="..\..\include\intersection_info.h" />
+    <ClInclude Include="..\..\include\ray.h" />
+    <ClInclude Include="..\..\include\raytracer.h" />
+    <ClInclude Include="..\..\include\camera.h" />
+    <ClInclude Include="..\..\include\scene.h" />
+    <ClInclude Include="..\..\include\box.h" />
+    <ClInclude Include="..\..\include\cylinder.h" />
+    <ClInclude Include="..\..\include\kd_tree.h" />
+    <ClInclude Include="..\..\include\plane.h" />
+    <ClInclude Include="..\..\include\primitive.h" />
+    <ClInclude Include="..\..\include\primitive_group.h" />
+    <ClInclude Include="..\..\include\sphere.h" />
+    <ClInclude Include="..\..\include\transformation_group.h" />
+    <ClInclude Include="..\..\include\triangle.h" />
+    <ClInclude Include="..\..\include\directional_light.h" />
+    <ClInclude Include="..\..\include\light_source.h" />
+    <ClInclude Include="..\..\include\point_light.h" />
+    <ClInclude Include="..\..\include\spot_light.h" />
+    <ClInclude Include="..\..\include\blinn_phong.h" />
+    <ClInclude Include="..\..\include\material.h" />
+    <ClInclude Include="..\..\include\phong.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\src\intersection_info.cpp" />
+    <ClCompile Include="..\..\src\raytracer.cpp" />
+    <ClCompile Include="..\..\src\camera.cpp" />
+    <ClCompile Include="..\..\src\scene.cpp" />
+    <ClCompile Include="..\..\src\box.cpp" />
+    <ClCompile Include="..\..\src\cylinder.cpp" />
+    <ClCompile Include="..\..\src\kd_tree.cpp" />
+    <ClCompile Include="..\..\src\plane.cpp" />
+    <ClCompile Include="..\..\src\primitive.cpp" />
+    <ClCompile Include="..\..\src\primitive_group.cpp" />
+    <ClCompile Include="..\..\src\sphere.cpp" />
+    <ClCompile Include="..\..\src\transformation_group.cpp" />
+    <ClCompile Include="..\..\src\triangle.cpp" />
+    <ClCompile Include="..\..\src\directional_light.cpp" />
+    <ClCompile Include="..\..\src\light_source.cpp" />
+    <ClCompile Include="..\..\src\point_light.cpp" />
+    <ClCompile Include="..\..\src\spot_light.cpp" />
+    <ClCompile Include="..\..\src\blinn_phong.cpp" />
+    <ClCompile Include="..\..\src\material.cpp" />
+    <ClCompile Include="..\..\src\phong.cpp" />
+    <ClCompile Include="..\..\src\main.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

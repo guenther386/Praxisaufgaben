@@ -1,0 +1,10 @@
+@exclude<cgv/config/make.ppp>
+@define(projectGUID="CF72E26A-083B-488f-811C-5C3367EA2BA0")
+@define(addIncDirs=[INPUT_DIR, INPUT_DIR."/freeglut-2.6.0/include"])
+@define(addLibDirs=[INPUT_DIR."/freeglut-2.6.0/lib"])
+@define(excludeSourceDirs=[INPUT_DIR."/viewer",INPUT_DIR."/freeglut-2.6.0"])
+@define(projectType="application")
+@define(projectName="viewer")
+@define(mapDeps::freeglut = ["freeglut_static","freeglut_static_d","freeglut","freeglut_d"])
+@define(addDependencies=["opengl","glu","freeglut"])
+@define(addStaticDefines=["FREEGLUT_STATIC"])

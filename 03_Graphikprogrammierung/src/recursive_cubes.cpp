@@ -39,30 +39,8 @@ void recursive_cubes::render()
 
 void recursive_cubes::render_recursive(int r, bool render_all, int children)
 {
-	/*  Recursion end condition
-	if (r<=0)
-		return;
-
-	just testing */
-		
-	// Render the actual cube
+	// first render the initial cube
 	render_cube();
-	
-
-	r = 0;
-	if (r < 3){
-		// iterate through
-		for (int r = 0; r <= 3; r++){
-
-			glPushMatrix();
-			glRotated(r * 90 - 90, 0, 0, 1);
-			glTranslated(2, 0, 0);
-			glScaled(0.5, 0.5, 0.5);
-			render_cube();
-			glPopMatrix();
-		}
-	}
-
 
 
 	/********
@@ -91,6 +69,45 @@ void recursive_cubes::render_recursive(int r, bool render_all, int children)
 
 
 
+	// Hier wurde nur ein funktionsfähiger Weg gefunden an 4 Seiten des Würfels neue, skalierte Würfel zu zeichnen
+	r = 0;
+	if (r <= 3)
+		// iterate through...
+		for (int a = 0; a <= 3; a++){
+
+		glPushMatrix();
+			glRotated(a * 90 - 90, 0, 0, 1);
+			glTranslated(2, 0, 0);
+			glScaled(0.5, 0.5, 0.5);
+			render_cube();
+		glPopMatrix();
+	}
+
+
+
+	/* Hier wurde versucht einen rekursive Lösung zu finden; verursacht StackOverflow deshalb auskommentiert.
+	
+	depth = 4;
+	if (depth < children)
+
+		// iterate through
+		for (children; children = 1; children--){
+
+		glPushMatrix();
+			glRotated(children * 90 - 90, 0, 0, 1);
+			glTranslated(2, 0, 0);
+			glScaled(0.5, 0.5, 0.5);
+			render_cube();
+			render_recursive(depth, true, children - 1);
+		glPopMatrix();
+
+		depth = depth - 1;
+		}
+
+	*/
+
+
+
 }
 
 
@@ -102,6 +119,7 @@ void recursive_cubes::render_cube()
 	glColor3d(1, 1, 0);
 	// Render a cube with side length 2
 	glutSolidCube(2);
+
 }
 
 

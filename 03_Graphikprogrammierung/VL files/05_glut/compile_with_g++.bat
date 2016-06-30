@@ -1,0 +1,1 @@
+g++ *.cxx -o viewer.exe -I. -I freeglut-2.6.0/include -L freeglut-2.6.0/lib -l freeglut -l opengl32 -l glu32

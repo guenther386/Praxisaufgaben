@@ -1,0 +1,6 @@
+@exclude<cgv/config/make.ppp>
+@define(projectGUID="FD9E1D6C-DD8F-4143-8708-65CF8F582F5A")
+@define(addIncDirs=[INPUT_DIR])
+@define(excludeSourceDirs=[INPUT_DIR."/vs_2008"])
+@define(projectType="application")
+@define(projectName="scaffold")

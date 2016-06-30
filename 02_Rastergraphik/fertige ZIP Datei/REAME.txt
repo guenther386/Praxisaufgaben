@@ -1,0 +1,3 @@
+Marc-Eric Schneider, 4500427
+
+Bearbeitete Dateien liegen im Ordner "build/vs2012" und die Projektmappe heißt raster_graphics

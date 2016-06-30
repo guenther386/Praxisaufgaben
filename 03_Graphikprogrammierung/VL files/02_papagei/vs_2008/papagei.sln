@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "papagei", "papagei.vcproj", "{FDBF75EF-4B64-48BE-ABCC-8DD22028BBAB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FDBF75EF-4B64-48BE-ABCC-8DD22028BBAB}.Debug|Win32.ActiveCfg = Debug|Win32
+		{FDBF75EF-4B64-48BE-ABCC-8DD22028BBAB}.Debug|Win32.Build.0 = Debug|Win32
+		{FDBF75EF-4B64-48BE-ABCC-8DD22028BBAB}.Release|Win32.ActiveCfg = Release|Win32
+		{FDBF75EF-4B64-48BE-ABCC-8DD22028BBAB}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
